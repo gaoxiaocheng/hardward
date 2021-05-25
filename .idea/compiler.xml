@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="datacollect" />
+        <module name="selfspace" />
+        <module name="security" />
+        <module name="core" />
+        <module name="entities" />
+        <module name="manage" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="bean" target="1.8" />
+      <module name="bean1" target="1.8" />
+      <module name="test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="bean" options="-parameters" />
+      <module name="bean1" options="-parameters" />
+      <module name="core" options="-parameters" />
+      <module name="datacollect" options="-parameters" />
+      <module name="entities" options="-parameters" />
+      <module name="hardware" options="-parameters" />
+      <module name="manage" options="-parameters" />
+      <module name="security" options="-parameters" />
+      <module name="test" options="-parameters" />
+    </option>
+  </component>
+</project>
