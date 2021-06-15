@@ -8,8 +8,33 @@ datasource:
     min-idle:  1
     max-active:  20
     test-on-borrow:  true
+
   #扫描mapper包下以Dao.xml结尾的文件
 mybatis-plus:
   mapper-locations: classpath*:mapper/*Dao.xml
 server:
   port: 8089
+#spring:
+#  security:
+#    basic:
+#      enabled: true
+#      path: /doc.html
+#    user:
+#      name: admin
+#      password: admin
+swagger:
+  enable: true
+
+spring:
+  profiles:
+    active: shiro
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/machine_data?useSSL=false&serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+    jackson:
+      date-format: yyyy-MM-dd HH:mm:ss
+      time-zone: GMT+8
+      serialization:
+        write-dates-as-timestamps: false

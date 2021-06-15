@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @EnableAutoConfiguration
-@ComponentScan({"com.core", "com.machine"})
+@ComponentScan({"com.core", "com.machine","com.security"})
 @MapperScan("com.machine.collect.mapper")
 public class DataCollectApplication {
 

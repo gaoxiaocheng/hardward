@@ -12,5 +12,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @since 2021-05-25
  */
 public interface ISecurityUserService extends IService<SecurityUser> {
+    SecurityUser getUserByCode(String code);
 
 }

@@ -17,4 +17,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class SecurityUserServiceImpl extends ServiceImpl<SecurityUserMapper, SecurityUser> implements ISecurityUserService {
 
+    @Override
+    public SecurityUser getUserByCode(String code) {
+        return null;
+    }
 }
