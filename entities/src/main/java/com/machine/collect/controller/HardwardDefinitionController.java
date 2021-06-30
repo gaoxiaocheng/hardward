@@ -1,6 +1,7 @@
 package com.machine.collect.controller;
 
 
+import com.machine.collect.entity.HardwardDefinition;
 import com.machine.collect.service.IHardwardDefinitionService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -23,10 +24,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/hardward-definition")
 public class HardwardDefinitionController {
     @Autowired
-    IHardwardDefinitionService iHardwardDefinitionService;
-    @ApiOperation("硬件定义入口")
+    IHardwardDefinitionService hardwareDefinitionService;
+    @ApiOperation("硬件查询入口")
     @RequestMapping(value="find/{id}",method = RequestMethod.POST)
     public void find(String id){}
+
+    @ApiOperation("硬件定义入口")
+    @RequestMapping(value="save",method = RequestMethod.POST)
+    public void save(HardwardDefinition hardwardDefinition){
+        hardwareDefinitionService.save(hardwardDefinition);
+    }
 
 
 }

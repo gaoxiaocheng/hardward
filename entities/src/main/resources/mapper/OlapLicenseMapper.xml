@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.machine.collect.mapper.OlapLicenseMapper">
+    <resultMap id="BaseResultMap" type="com.machine.collect.entity.OlapLicense">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="code" property="code"/>
+        <result column="file" property="file" typeHandler="org.apache.ibatis.type.BlobTypeHandler"/>
+        <result column="create_time" property="creatTime"/>
+        <result column="ip" property="ip"/>
+        <result column="priTable" property="priTable"/>
+    </resultMap>
+    <select id="selectById" parameterType="Integer" resultMap="BaseResultMap">
+		select file from olap_license where id = #{id}
+	</select>
+    <insert id="save" parameterType="com.machine.collect.entity.OlapLicense">
+   		insert into olap_license(name, file, code, ip)
+		values(#{name}, #{file,typeHandler=org.apache.ibatis.type.BlobTypeHandler}, #{code}, #{ip})
+   </insert>
+</mapper>

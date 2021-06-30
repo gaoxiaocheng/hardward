@@ -1,7 +1,5 @@
 package com.security.fiter;
 
-import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
@@ -13,8 +11,6 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 
 import javax.servlet.ServletContext;
-import java.util.HashMap;
-import java.util.Map;
 
 
 @Configuration
@@ -64,7 +60,7 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
 
     @Override
     public void setServletContext(ServletContext servletContext) {
-        servletContext.setSessionTimeout(12*60*60);
+        servletContext.setSessionTimeout(12 * 60 * 60);
         super.setServletContext(servletContext);
     }
 }

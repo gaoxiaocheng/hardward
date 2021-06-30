@@ -12,6 +12,7 @@ shiro:
       - /configuration/ui
       - /swagger-resources/configuration/ui/**
       - /swagger-resources/configuration/security/**
+      - /olap-license/**
     authc:
       - /testThymeleaf
       - /**

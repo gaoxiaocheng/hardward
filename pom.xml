@@ -53,6 +53,12 @@
 <!--            <artifactId>swagger-bootstrap-ui</artifactId>-->
 <!--            <version>1.9.0</version>-->
 <!--        </dependency>-->
+        <dependency>
+            <groupId>de.schlichtherle.truelicense</groupId>
+            <artifactId>truelicense-core</artifactId>
+            <version>1.33</version>
+            <scope>provided</scope>
+        </dependency>
         <!--shiro安全框架 start-->
         <dependency>
             <groupId>org.apache.shiro</groupId>
